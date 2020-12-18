@@ -1,20 +1,6 @@
 ---
 layout: page
 ---
-<h3 class="has-text-primary" style="margin-top: 0;" >Tag Cloud:</h3>
-<div class="post-tags info">
-    <div class="field is-grouped is-grouped-multiline">
-        {% for category in site.categories %}
-        <div class="control">
-            <div class="tags has-addons">
-                <a href="/categories#{{ category[0] | downcase }}" class="tag is-medium is-primary">{{ category[0] }}</a>
-                <a href="/categories#{{ category[0] | downcase }}" class="tag is-medium">{{ category[1].size }}</a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div><br><br><br>
-
 {% assign size = site.posts | size %}
 {% for post in site.posts %}
   {% assign loopindex = forloop.index | modulo: 2 %}
